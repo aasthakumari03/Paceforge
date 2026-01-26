@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Study Urgency Engine (PaceForge)
 
-## Getting Started
+PaceForge is a production-ready web application designed to create **artificial urgency**, **clear structure**, and **visible progress** for college students. It helps students tackle the lack of strict deadlines by assigning logic-based urgency scores to tasks.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Core Task & Urgency System
+- **Auto-generated Urgency**: Tasks are scored (0-100) based on deadline proximity, priority, and rollover status.
+- **Rollover Penalty**: Unfinished tasks gain higher urgency automatically.
+- **Smart Reminders**: Context-aware reminders ("Still pending. Future you is watching.").
+
+### Student-Focused Dashboard
+- **Daily Focus View**: Only shows what matters today.
+- **Subject Management**: Track subjects, syllabus, and target grades.
+- **Visual Progress**: Weekly charts tracking assigned vs. completed tasks.
+
+### Tech Stack
+- **Frontend**: Next.js 14+ (App Router), Tailwind CSS, TypeScript
+- **Backend**: Next.js API Routes (Serverless Node.js logic)
+- **Database**: MongoDB (via Mongoose)
+- **Auth**: Custom JWT Authentication (Secure, Lightweight)
+- **Charts**: Chart.js
+
+## 🛠️ Setup Instructions
+
+### Prerequisites
+- Node.js 18+
+- MongoDB Database (Local or Atlas URL)
+
+### Installation
+
+1. **Clone the repository** (if applicable) or navigate to project folder:
+   ```bash
+   cd paceforge
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Environment Setup**:
+   Create a `.env.local` file in the root directory:
+   ```bash
+   MONGODB_URI=mongodb://localhost:27017/paceforge
+   JWT_SECRET=your_super_secret_key_change_me
+   ```
+
+4. **Run Development Server**:
+   ```bash
+   npm run dev
+   ```
+
+5. **Open Browser**:
+   Navigate to `http://localhost:3000`.
+
+## 📂 Project Structure
+
+```
+/src
+  /app           # Next.js App Router Pages & API
+    /api         # Backend Routes (Auth, Tasks, User)
+    /auth        # Login / Register Pages
+    /dashboard   # Main User Dashboard
+    /profile     # Profile Setup
+  /components    # Reusable UI (Buttons, Inputs, Charts)
+  /lib           # Core Utilities (DB Connect, Auth)
+  /models        # Mongoose Database Schemas
+  /utils         # Urgency Algorithm & Helpers
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔮 Future Improvements
+- **Gamification Expansion**: Unlockable badges for streaks.
+- **Calendar Integration**: Sync with Google/Outlook Calendar.
+- **Mobile App**: PWA or React Native port.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Built with ❤️ for Students.
