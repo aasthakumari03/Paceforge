@@ -8,7 +8,7 @@ import SocialIcons from './SocialIcons';
 
 export default function Navbar() {
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-white/30 backdrop-blur-md shadow-sm">
+        <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-white/30 backdrop-blur-md">
             {/* Left Section */}
             <div className="flex items-center gap-6">
                 <AKLogo />
