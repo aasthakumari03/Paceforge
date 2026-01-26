@@ -33,7 +33,7 @@ export default function Home() {
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto space-y-8 mt-20">
 
         {/* Main Title - Paceforge */}
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-bold tracking-tight text-amber-50 drop-shadow-xl select-none">
+        <h1 className="text-7xl md:text-9xl lg:text-[12rem] font-serif font-black tracking-tight text-amber-50 drop-shadow-2xl select-none">
           Paceforge
         </h1>
 
