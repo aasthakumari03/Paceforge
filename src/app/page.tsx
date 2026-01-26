@@ -6,34 +6,39 @@ export default function Home() {
     <main className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-zinc-50">
       <Navbar />
 
-      {/* Background - Light Rays */}
-      <div className="absolute inset-0 pointer-events-none flex items-center justify-center overflow-hidden">
-        {/* Soft center glow */}
-        <div className="absolute h-[500px] w-[500px] bg-gradient-to-r from-blue-100/40 to-teal-100/40 blur-[100px] rounded-full animate-pulse opacity-60" />
-
-        {/* Rays Container - Rotates slowly */}
-        <div className="absolute inset-0 animate-spin-slow opacity-30">
-          {/* Creating multiple rays using conical gradients and masks is complex in pure css, 
-              simpler approach: large radial gradients or rotated divs */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200vw] h-[200vw]">
-            <div className="absolute inset-0 bg-[conic-gradient(from_0deg,transparent_0deg,white_10deg,transparent_20deg,white_40deg,transparent_60deg,white_80deg,transparent_90deg)] opacity-40 mix-blend-overlay" />
-            <div className="absolute inset-0 bg-[conic-gradient(from_180deg,transparent_0deg,white_15deg,transparent_30deg,white_45deg,transparent_70deg,white_85deg,transparent_100deg)] opacity-30 mix-blend-overlay rotate-12" />
-          </div>
+      {/* Background - Cinematic Image */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 z-0">
+          {/* Using standard img tag for simplicity in styling absolute, or Next.js Image if imported. 
+               Using div with background-image is also fine but Next.js Image is better for optimization.
+               Since I cannot import Image component easily without adding import, I will use a standard img tag with object-cover 
+               OR purely CSS if I want to avoid imports. But Next.js Image is best. 
+               I need to add the import first? No, I can use a replacement chunk that includes the import if needed, 
+               but here I am replacing the *body* of the component.
+               Wait, I need to check imports.
+           */}
+          <img
+            src="/background.png"
+            alt="Golden hour window background"
+            className="w-full h-full object-cover"
+          />
         </div>
 
-        {/* Secondary texture/grain (optional, skipping for clean look requests) */}
+        {/* Overlay for text readability - Warm/Dark gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/20 z-1 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-amber-900/10 z-1 mix-blend-overlay" />
       </div>
 
       {/* Content - Centered */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto space-y-8">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto space-y-8 mt-20">
 
         {/* Main Title - Paceforge */}
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-zinc-900 drop-shadow-sm select-none">
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white drop-shadow-lg select-none">
           Paceforge
         </h1>
 
         {/* Description */}
-        <p className="text-lg md:text-xl text-zinc-500 font-medium max-w-2xl leading-relaxed">
+        <p className="text-lg md:text-xl text-white/90 font-medium max-w-2xl leading-relaxed drop-shadow-md">
           Paceforge is a study-urgency system that helps college students stay consistent by turning vague goals into daily, time-bound action.
         </p>
 
