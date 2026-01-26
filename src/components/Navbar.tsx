@@ -20,14 +20,14 @@ export default function Navbar() {
             <div className="flex items-center gap-6">
                 <Link
                     href="/auth/login"
-                    className="flex items-center gap-2 text-sm font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
+                    className="flex items-center gap-2 text-sm font-serif font-medium text-amber-900 hover:text-amber-950 transition-colors"
                 >
                     <LogIn size={20} />
                     <span className="text-base">Login</span>
                 </Link>
                 <Link
                     href="/auth/register"
-                    className="group flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200/50 bg-white/50 hover:bg-white text-sm font-medium text-zinc-800 shadow-sm hover:shadow-md transition-all duration-300"
+                    className="group flex items-center gap-2 px-4 py-2 rounded-full border border-amber-200/50 bg-white/50 hover:bg-white text-sm font-serif font-medium text-amber-900 shadow-sm hover:shadow-md transition-all duration-300"
                 >
                     <span className="text-base">Get Started</span>
                     <ArrowRight size={18} className="group-hover:translate-x-0.5 transition-transform" />

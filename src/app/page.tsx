@@ -33,12 +33,12 @@ export default function Home() {
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto space-y-8 mt-20">
 
         {/* Main Title - Paceforge */}
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white drop-shadow-lg select-none">
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-bold tracking-tight text-amber-50 drop-shadow-xl select-none">
           Paceforge
         </h1>
 
         {/* Description */}
-        <p className="text-lg md:text-xl text-white/90 font-medium max-w-2xl leading-relaxed drop-shadow-md">
+        <p className="text-lg md:text-xl text-amber-100/90 font-serif font-medium max-w-2xl leading-relaxed drop-shadow-lg text-shadow-sm">
           Paceforge is a study-urgency system that helps college students stay consistent by turning vague goals into daily, time-bound action.
         </p>
 
