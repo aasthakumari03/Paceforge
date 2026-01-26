@@ -17,20 +17,20 @@ export default function Navbar() {
             </div>
 
             {/* Right Section */}
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-8">
                 <Link
                     href="/auth/login"
-                    className="flex items-center gap-2 text-sm font-serif font-medium text-amber-900 hover:text-amber-950 transition-colors"
+                    className="flex items-center gap-2 text-lg font-serif font-bold text-amber-900 hover:text-amber-950 transition-colors drop-shadow-sm hover:scale-105 duration-300"
                 >
-                    <LogIn size={20} />
-                    <span className="text-base">Login</span>
+                    <LogIn size={24} strokeWidth={2.5} />
+                    <span>Login</span>
                 </Link>
                 <Link
                     href="/auth/register"
-                    className="group flex items-center gap-2 px-4 py-2 rounded-full border border-amber-200/50 bg-white/50 hover:bg-white text-sm font-serif font-medium text-amber-900 shadow-sm hover:shadow-md transition-all duration-300"
+                    className="group flex items-center gap-2 px-6 py-3 rounded-full border-2 border-amber-200/80 bg-white/70 hover:bg-white text-lg font-serif font-bold text-amber-900 shadow-md hover:shadow-lg hover:shadow-amber-900/10 transition-all duration-300 hover:-translate-y-0.5"
                 >
-                    <span className="text-base">Get Started</span>
-                    <ArrowRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
+                    <span>Get Started</span>
+                    <ArrowRight size={22} strokeWidth={2.5} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
             </div>
         </nav>
