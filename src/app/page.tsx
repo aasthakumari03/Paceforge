@@ -33,7 +33,7 @@ export default function Home() {
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-5xl mx-auto space-y-8 mt-20">
 
         {/* Glass Card Container */}
-        <div className="p-12 md:p-16 rounded-[3rem] backdrop-blur-xl bg-black/30 border border-white/50 shadow-[0_0_50px_rgba(255,255,255,0.2),inset_0_0_30px_rgba(255,255,255,0.1)] flex flex-col items-center gap-8 animate-fade-in">
+        <div className="p-12 md:p-16 rounded-[3rem] backdrop-blur-xl bg-black/40 border border-white/60 shadow-[0_0_60px_rgba(255,255,255,0.3),_0_0_20px_rgba(255,255,255,0.5),_inset_0_0_30px_rgba(255,255,255,0.1)] flex flex-col items-center gap-8 animate-fade-in">
           {/* Main Title - Paceforge */}
           <h1 className="text-7xl md:text-9xl lg:text-[10rem] font-serif font-black tracking-tight text-amber-50 drop-shadow-2xl select-none leading-none">
             Paceforge
