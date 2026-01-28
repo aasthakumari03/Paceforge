@@ -40,7 +40,7 @@ export default function Home() {
           </h1>
 
           {/* Description */}
-          <p className="text-lg md:text-2xl text-amber-100/90 font-serif font-medium max-w-3xl leading-relaxed drop-shadow-lg text-shadow-sm">
+          <p className="text-lg md:text-2xl text-orange-100 font-serif font-medium max-w-3xl leading-relaxed drop-shadow-lg text-shadow-sm">
             Paceforge is a study-urgency system that helps college students stay consistent by turning vague goals into daily, time-bound action.
           </p>
         </div>
