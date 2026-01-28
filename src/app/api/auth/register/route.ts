@@ -6,7 +6,7 @@ import { signToken } from '@/lib/auth';
 
 export async function POST(request: Request) {
     try {
-        const { name, email, password } = await request.json();
+        const { name, email, password, collegeName, year, semester, branch } = await request.json();
 
         if (!name || !email || !password) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
@@ -25,6 +25,10 @@ export async function POST(request: Request) {
             name,
             email,
             passwordHash,
+            collegeName: collegeName || '',
+            year: year || '1st',
+            semester: semester ? parseInt(semester) : 1,
+            branch: branch || '',
         });
 
         const token = signToken({ userId: user._id });
